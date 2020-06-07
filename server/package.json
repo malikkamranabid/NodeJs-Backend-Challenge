@@ -1,13 +1,13 @@
 {
-  "name": "docker-node-mongo-typescript",
+  "name": "nodejs-backend-challenge",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
+    "start": "nodemon --legacy-watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Sagynbek",
+  "author": "KamranAbid",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
