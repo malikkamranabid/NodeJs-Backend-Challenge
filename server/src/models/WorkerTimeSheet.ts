@@ -15,6 +15,10 @@ export const WorkerTimeSheetSchema = new mongoose.Schema({
     default: [true]
   },
   workerId: userSchema,
+  created: {
+    type: Date,
+    default: Date.now
+  },
 });
 
 const WorkerTimeSheet = mongoose.model("WorkerTimeSheet", WorkerTimeSheetSchema)

@@ -1,20 +1,37 @@
-version: '3'
-
+version: '3.3'
 services:
   server:
     build: 
       context: server
     ports:
-      - "8088:3001"
+      - "3000:3000"
     environment: 
-      PORT: 3001
-      DB_HOST: db
+      PORT: 3000
+      DB_HOST: mongo
     volumes:
       - ./server:/usr/src/app
+      - /usr/src/app/node_modules
     depends_on: 
-      [db]
+      [mongo]
   
-  db:
-    image: mongo:4.2.5
+  mongo:
+    image: mongo
+    container_name: mongo
     ports:
-      - "27018:27017"
+      - 27017:27017
+
+  mongo-seed:
+    image: stefanwalther/mongo-seed
+    container_name: mongo-seed
+    environment:
+      - MONGODB_HOST=mongo
+      - MONGODB_PORT=27017
+    volumes:
+      - ./config/db-seed:/data
+    depends_on:
+      - mongo
+    command: [
+      "mongoimport --host mongo --port 27017 --db NodeJsBackendChallenge --mode upsert --type json --file /data/users.json --jsonArray"
+    ]
+
+

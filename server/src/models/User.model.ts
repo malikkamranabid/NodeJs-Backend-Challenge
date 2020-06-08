@@ -3,19 +3,10 @@ import { siteSchema } from "./Site.model";
 
 
 export const userSchema = new mongoose.Schema({
-  firstName: {
+  name: {
     type: String,
     trim: true,
     default: ''
-  },
-  lastName: {
-    type: String,
-    trim: true,
-    default: ''
-  },
-  displayName: {
-    type: String,
-    trim: true
   },
   email: {
     type: String,
@@ -36,12 +27,9 @@ export const userSchema = new mongoose.Schema({
   salt: {
     type: String
   },
-  roles: {
-    type: [{
-      type: String,
-      enum: ['worker', 'admin']
-    }],
-    default: ['worker']
+  isadmin: {
+    type: Boolean,
+    default: false
   },
   updated: {
     type: Date
