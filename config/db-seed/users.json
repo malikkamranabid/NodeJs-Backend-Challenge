@@ -3,12 +3,14 @@
     "name": "Joe Smith",
     "email": "jsmith@gmail.com",
     "username": "joe",
-    "isadmin": false
+    "isadmin": false,
+    "siteName": "City Center"
   },
   {
     "name": "Jen Ford",
     "email": "jford@gmail.com",
     "username": "jen",
-    "isadmin": true
+    "isadmin": true,
+    "siteName": "City Center"
   }
 ]

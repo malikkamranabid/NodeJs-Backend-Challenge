@@ -1,0 +1,18 @@
+[
+  {
+    "siteName": "City Center",
+    "timeZone": "UTC-12:00",
+    "startingHour": 9,
+    "endingHour": 6,
+    "latethresHold": 1,
+    "totalInactivehours": 15
+  },
+  {
+    "siteName": "Urban Center",
+    "timeZone": "UTC-11:00",
+    "startingHour": 8,
+    "endingHour": 5,
+    "latethresHold": 1,
+    "totalInactivehours": 15
+  }
+]

@@ -8,26 +8,26 @@ export const siteSchema = new mongoose.Schema({
     unique: true,
     required: 'Site Name is required',
   },
-  Timezone: {
+  timeZone: {
     type: String,
     trim: true,
     required: 'Time Zone is required',
   },
-  Startinghour: {
+  startingHour: {
     type: String,
     required: 'Starting hour is required',
     trim: true
   },
-  Endinghour: {
-    type: String,
+  endingHour: {
+    type: Number,
     required: 'Ending hour is required',
     trim: true
   },
-  Latethreshold : {
-    type: String,
+  latethresHold : {
+    type: Number,
     required: 'Late threshold is required'
   },
-  TotalInactivehours: {
+  totalInactivehours: {
     type: Number,
     required: 'Total In activehours is required'
   },

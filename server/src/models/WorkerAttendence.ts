@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { userSchema } from "./User.model";
 
 
 export const WorkerAttendenceSchema = new mongoose.Schema({
@@ -13,6 +14,7 @@ export const WorkerAttendenceSchema = new mongoose.Schema({
     }],
     default: ['onTime']
   },
+  workerUserName: userSchema,
 });
 
 const WorkerAttendence = mongoose.model("WorkerAttendence", WorkerAttendenceSchema)
