@@ -1,18 +1,21 @@
 import { Router } from 'express'
-import Site from '../models/Site.model';
+import User from '../models/User.model';
+import WorkerAttendence from '../models/WorkerAttendence.model';
 
 const siteRouter = Router();
 
+siteRouter.get('/generateReport/:siteUnqiueName', async (req, res, next) => {;
+  
+  const siteUsersId = (await User.find({
+    siteName: req.params.siteUnqiueName,
+    isadmin: false
+  })).map((user: any) => user._id);
 
+  console.log(`this is siteWorkersUserNames ${siteUsersId}`);
+  const siteWorkersAttendance = await WorkerAttendence.find({ "user": { "$in": [siteUsersId] } });
 
-siteRouter.get('/generateReport/:siteId', async (req, res, next) => {
-  Site.find()
-    .then((sites) => {
-      return res.json(sites);
-    })
-    .catch((err) => {
-      next(err);
-    })
+  res.json({ siteWorkersAttendance });
+
 })
 
 export default siteRouter;

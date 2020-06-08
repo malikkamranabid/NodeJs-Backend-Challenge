@@ -8,6 +8,12 @@ export const siteSchema = new mongoose.Schema({
     unique: true,
     required: 'Site Name is required',
   },
+  siteUnqiueName: {
+    type: String,
+    trim: true,
+    unique: true,
+    required: 'Site Unqiue Name is required',
+  },
   timeZone: {
     type: String,
     trim: true,

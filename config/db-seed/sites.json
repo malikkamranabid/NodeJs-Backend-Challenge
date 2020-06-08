@@ -1,6 +1,7 @@
 [
   {
     "siteName": "City Center",
+    "siteUnqiueName": "city_center",
     "timeZone": "UTC-12:00",
     "startingHour": 9,
     "endingHour": 6,
@@ -9,6 +10,7 @@
   },
   {
     "siteName": "Urban Center",
+    "siteUnqiueName": "urban_center",
     "timeZone": "UTC-11:00",
     "startingHour": 8,
     "endingHour": 5,

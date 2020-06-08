@@ -4,13 +4,13 @@
     "email": "jsmith@gmail.com",
     "username": "joe",
     "isadmin": false,
-    "siteName": "City Center"
+    "siteName": "city_center"
   },
   {
     "name": "Jen Ford",
     "email": "jford@gmail.com",
     "username": "jen",
     "isadmin": true,
-    "siteName": "City Center"
+    "siteName": "city_center"
   }
 ]

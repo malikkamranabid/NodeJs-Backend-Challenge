@@ -14,7 +14,7 @@ export const WorkerAttendenceSchema = new mongoose.Schema({
     }],
     default: ['onTime']
   },
-  workerUserName: userSchema,
+  user: [{ type: mongoose.Schema.Types.String, ref: 'User' }]
 });
 
 const WorkerAttendence = mongoose.model("WorkerAttendence", WorkerAttendenceSchema)

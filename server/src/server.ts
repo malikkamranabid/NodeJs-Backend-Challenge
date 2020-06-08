@@ -5,6 +5,7 @@ import PageNotFoundError from './exceptions/PageNotFoundError';
 import ServerError from './exceptions/ServerError';
 import ExceptionBase from './exceptions/ExceptionBase';
 import connectDb from './models/connection';
+import siteRouter from './routes/site-router';
 
 
 const app: Application = express();
@@ -21,7 +22,7 @@ app.get('/', (req, res) => {
   });
 })
 app.use('/user', userRouter);
-
+app.use('/sites', siteRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
